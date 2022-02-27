@@ -44,3 +44,15 @@ func printNodes(nodes []*ListNode) {
 	}
 	fmt.Printf("\nprint nodes over\n")
 }
+
+func LinkNodes(lists []*ListNode) (head *ListNode, tail *ListNode){
+	if len(lists) == 0 {
+		return nil,nil
+	}
+	cur := lists[0]
+	n := len(lists)
+	for i := 1;i < n; i++ {
+		cur.Next = lists[i]
+	}
+	return lists[0], lists[n-1]
+}
