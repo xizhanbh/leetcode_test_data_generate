@@ -35,3 +35,12 @@ func PrintNode(head *ListNode) {
 	}
 	fmt.Printf("\n")
 }
+
+func printNodes(nodes []*ListNode) {
+	fmt.Printf("print nodes now\n")
+	n := len(nodes)
+	for i := 0 ; i< n;i++ {
+		fmt.Printf("%v ", nodes[i].Val)
+	}
+	fmt.Printf("\nprint nodes over\n")
+}
